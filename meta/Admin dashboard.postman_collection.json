@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "0514c245-3d78-4461-95f4-f2bed1eb0030",
+		"name": "Admin dashboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19966694"
+	},
+	"item": [
+		{
+			"name": "notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dashboard/notifications",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dashboard",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notifications specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dashboard/notifications/6",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dashboard",
+						"notifications",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

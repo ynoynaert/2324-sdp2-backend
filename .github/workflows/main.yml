@@ -1,0 +1,50 @@
+name: Backend Tests
+on: push
+
+jobs:
+  japa-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['21.6.2']
+
+    container:
+      image: node:${{ matrix.node-version }}
+
+    services:
+      mysql:
+        image: mysql
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: backend-tests
+        options: >-
+          --health-cmd "mysqladmin ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Set environment variables
+        run: |
+          echo "APP_KEY=somefakekeythatis>16characters" >> .env.test
+          echo "HOST=localhost" >> .env.test
+          echo "LOG_LEVEL=debug" >> .env.test
+          echo "DB_HOST=mysql" >> .env.test
+          echo "DB_PORT=3306" >> .env.test
+          echo "DB_USER=root" >> .env.test
+          echo "DB_PASSWORD=password" >> .env.test
+          echo "DB_DATABASE=backend-tests" >> .env.test
+          echo "NODE_ENV=test" >> .env.test
+          echo "ASSETS_DRIVER=fake" >> .env.test
+          echo "SESSION_DRIVER=memory" >> .env.test
+          echo "CACHE_VIEWS=false" >> .env.test
+          echo "DRIVE_DISK=local" >> .env.test
+
+      - name: Run tests
+        run: node ace test

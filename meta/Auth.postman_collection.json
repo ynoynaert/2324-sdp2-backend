@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "b1697833-81d1-4537-ba93-ffea773fb036",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19966694"
+	},
+	"item": [
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@delaware.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Niet geldige login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@delaware.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Geldige login supplier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "account@supplier.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Geldige login client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "account@supplier.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "lorenzo.hanssens@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "RootRoot123",
+							"type": "text"
+						},
+						{
+							"key": "isAdmin",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "lorenzo.hanssens@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "RootRoot123",
+							"type": "text"
+						},
+						{
+							"key": "isAdmin",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Auroratech",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"value": "https://fuckoff.com",
+							"type": "text"
+						},
+						{
+							"key": "vat_number",
+							"value": "BACDUEIE",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "BELGIUM 🏳️‍🌈",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "9300",
+							"type": "text"
+						},
+						{
+							"key": "street",
+							"value": "arbeidstraat 14",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "health",
+							"type": "text"
+						},
+						{
+							"key": "supplierEmail",
+							"value": "suppie@uppie.com",
+							"type": "text"
+						},
+						{
+							"key": "supplierFirstname",
+							"value": "suppie firstie",
+							"type": "text"
+						},
+						{
+							"key": "supplierLastname",
+							"value": "suppie lastie",
+							"type": "text"
+						},
+						{
+							"key": "supplierPhone",
+							"value": "abcksd",
+							"type": "text"
+						},
+						{
+							"key": "supplierPassword",
+							"value": "im disabled",
+							"type": "text"
+						},
+						{
+							"key": "clientEmail",
+							"value": "client@cli.com",
+							"type": "text"
+						},
+						{
+							"key": "clientFirstname",
+							"value": "cli fi",
+							"type": "text"
+						},
+						{
+							"key": "clientLastname",
+							"value": "cli la",
+							"type": "text"
+						},
+						{
+							"key": "clientPassword",
+							"value": "im disabled",
+							"type": "text"
+						},
+						{
+							"key": "clientPhone",
+							"value": "dsshjjhdsk",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/sign-up",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

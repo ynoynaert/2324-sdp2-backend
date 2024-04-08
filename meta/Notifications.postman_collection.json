@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "ca822c49-4e34-4d97-9c87-cf8c93d55baf",
+		"name": "Notifications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19966694"
+	},
+	"item": [
+		{
+			"name": "get notifs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/me/notifications",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"me",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

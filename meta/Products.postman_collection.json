@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "583af9ef-6f23-482c-bc6b-72aefb523940",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19966694"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products?max=20&page=12&filterName=id&filterValue=12&orderBy=asc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "max",
+							"value": "20"
+						},
+						{
+							"key": "page",
+							"value": "12"
+						},
+						{
+							"key": "filterName",
+							"value": "id"
+						},
+						{
+							"key": "filterValue",
+							"value": "12"
+						},
+						{
+							"key": "orderBy",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Index Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products?max=20&page=12&filterName=id&filterValue=12&orderBy=asc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "max",
+							"value": "20"
+						},
+						{
+							"key": "page",
+							"value": "12"
+						},
+						{
+							"key": "filterName",
+							"value": "id"
+						},
+						{
+							"key": "filterValue",
+							"value": "12"
+						},
+						{
+							"key": "orderBy",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productprice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
